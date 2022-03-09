@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 2rem;
+    background: rgb(241, 241, 241);
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+}
+
+.card {
+    width: 40rem;
+    height: 40rem;
+    box-shadow: 1rem 1rem 2rem 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5rem;
+    flex-shrink: 0;
+    gap: 2rem;
+    background: white;
+}
+
+.card--stopwatch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    color: white;
+    width: 10rem;
+    
+}
+
+.button--start {
+    background: rgb(75, 145, 81);
+}
+
+.button--stop {
+    background: #8a4343;
+}
+
+.button--reset {
+    background: #416d8b;
+}
+
+.timerText {
+    font-size: 300%;
+    color: rgb(26, 26, 26);
+}
+
+.spanWrapper {
+    background: rgb(221, 221, 221);
+    border-radius: 0.5rem;
+    padding: 0.8rem 2rem;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    width: 31rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.miliText {
+    font-size: 2rem;
+}
