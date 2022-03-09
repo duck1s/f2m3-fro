@@ -4,10 +4,12 @@ const resetButton = document.getElementById("js--reset");
 const milisecondsTimer = document.getElementById("js--milisecondsTimer");
 const secondsTimer = document.getElementById("js--secondsTimer");
 const minutesTimer = document.getElementById("js--minutesTimer");
+const hoursTimer = document.getElementById("js--hoursTimer");
 
 let miliseconds = 0;
 let seconds = 0;
 let minutes = 0;
+let hours = 0;
 let running = false;
 
 startButton.onclick = function() {
@@ -26,9 +28,14 @@ startButton.onclick = function() {
             minutes++
             seconds = 0;
         }
+        if (minutes === 60) {
+            hours++
+            minutes = 0;
+        }
         milisecondsTimer.innerText = miliseconds;
         secondsTimer.innerText = seconds;
         minutesTimer.innerText = minutes;
+        hoursTimer.innerText = hours;
 
         if (miliseconds < 100 || miliseconds == 0) {
             milisecondsTimer.innerText = "0" + miliseconds;
@@ -42,6 +49,9 @@ startButton.onclick = function() {
         if (minutes < 10 || minutes == 0) {
             minutesTimer.innerText = "0" + minutes;
         }
+        if (hours < 10 || hours == 0) {
+            hoursTimer.innerText = "0" + hours;
+        }
 
     }, 1);
 };
@@ -52,10 +62,12 @@ stopButton.onclick = function() {
 }
 
 resetButton.onclick = function() {
-    miliseconds = "00" + 0;
-    seconds = "0" + 0;
-    minutes = "0" + 0;
+    miliseconds = 0;
+    seconds = 0;
+    minutes = 0;
+    hours = 0;
     milisecondsTimer.innerText = "000";
     secondsTimer.innerText = "00";
     minutesTimer.innerText = "00";
+    hoursTimer.innerText = "00";
 }
