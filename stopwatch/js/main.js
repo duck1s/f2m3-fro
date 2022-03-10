@@ -19,7 +19,7 @@ startButton.onclick = function() {
 
     running = true;
     timer = setInterval(function() {
-        miliseconds++;
+        miliseconds = miliseconds + 10;
         if (miliseconds === 1000) {
             seconds++
             miliseconds = 0;
@@ -53,7 +53,7 @@ startButton.onclick = function() {
             hoursTimer.innerText = "0" + hours;
         }
 
-    }, 1);
+    }, 10);
 };
 
 stopButton.onclick = function() {
