@@ -31,11 +31,42 @@ body {
     background: white;
 }
 
+.card--slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 4rem;
+}
+
 .card--stopwatch {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.card--slider > h2 {
+    font-size: 5rem;
+}
+
+.card--slider > input {
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 5rem;
+    background: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8);
+}
+
+.card--slider > input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    background: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8);
+    margin: -0.4rem 0;
 }
 
 .button {
@@ -44,7 +75,6 @@ body {
     border-radius: 0.5rem;
     color: white;
     width: 10rem;
-    
 }
 
 .button--start {
@@ -66,7 +96,7 @@ body {
 
 .spanWrapper {
     background: rgb(221, 221, 221);
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     padding: 0.8rem 2rem;
     border-style: outset;
     border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
@@ -74,6 +104,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 2rem;
 }
 
 .miliText {

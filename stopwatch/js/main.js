@@ -1,3 +1,5 @@
+// Dit is de stopwatch
+
 const startButton = document.getElementById("js--start");
 const stopButton = document.getElementById("js--stop");
 const resetButton = document.getElementById("js--reset");
@@ -12,24 +14,24 @@ let minutes = 0;
 let hours = 0;
 let running = false;
 
-startButton.onclick = function() {
+startButton.onclick = function () {
     if (running === true) {
         return;
     }
 
     running = true;
-    timer = setInterval(function() {
+    timer = setInterval(function () {
         miliseconds = miliseconds + 10;
         if (miliseconds === 1000) {
-            seconds++
+            seconds++;
             miliseconds = 0;
         }
         if (seconds === 60) {
-            minutes++
+            minutes++;
             seconds = 0;
         }
         if (minutes === 60) {
-            hours++
+            hours++;
             minutes = 0;
         }
         milisecondsTimer.innerText = miliseconds;
@@ -45,23 +47,22 @@ startButton.onclick = function() {
         }
         if (seconds < 10 || seconds == 0) {
             secondsTimer.innerText = "0" + seconds;
-          }
+        }
         if (minutes < 10 || minutes == 0) {
             minutesTimer.innerText = "0" + minutes;
         }
         if (hours < 10 || hours == 0) {
             hoursTimer.innerText = "0" + hours;
         }
-
     }, 10);
 };
 
-stopButton.onclick = function() {
+stopButton.onclick = function () {
     clearInterval(timer);
     running = false;
-}
+};
 
-resetButton.onclick = function() {
+resetButton.onclick = function () {
     miliseconds = 0;
     seconds = 0;
     minutes = 0;
@@ -70,4 +71,17 @@ resetButton.onclick = function() {
     secondsTimer.innerText = "00";
     minutesTimer.innerText = "00";
     hoursTimer.innerText = "00";
-}
+};
+
+// Hier begint de slider
+
+const rangeValue = document.getElementById("js--rangeValue");
+const slider = document.getElementById("js--slider");
+const body = document.getElementById("js--body");
+rangeValue.innerText = slider.value + "x";
+slider.value = 2;
+
+slider.oninput = function () {
+    rangeValue.innerText = slider.value + "x";
+    body.style.fontSize = slider.value + "rem";
+};
