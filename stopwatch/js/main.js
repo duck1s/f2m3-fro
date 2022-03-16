@@ -1,4 +1,4 @@
-// Dit is de stopwatch
+// Stopwatch
 
 const startButton = document.getElementById("js--start");
 const stopButton = document.getElementById("js--stop");
@@ -73,13 +73,13 @@ resetButton.onclick = function () {
     hoursTimer.innerText = "00";
 };
 
-// Hier begint de slider
+// Slider
 
 const rangeValue = document.getElementById("js--rangeValue");
 const slider = document.getElementById("js--slider");
 const body = document.getElementById("js--body");
+slider.value = 0;
 rangeValue.innerText = slider.value + "x";
-slider.value = 2;
 
 slider.oninput = function () {
     rangeValue.innerText = slider.value + "x";
