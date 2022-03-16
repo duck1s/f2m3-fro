@@ -85,3 +85,17 @@ slider.oninput = function () {
     rangeValue.innerText = slider.value + "x";
     body.style.fontSize = slider.value + "rem";
 };
+
+// 2e kaartje met text
+
+const text = document.getElementById("js--text");
+const img = document.getElementById("js--img");
+
+let data = {
+    "text": "Dit is een super leuke fantastische test.",
+    "image": "/img/picture.webp"
+};
+
+text.innerText = data.text;
+img.src = data.image;
+

@@ -31,6 +31,25 @@ body {
 	background: white;
 }
 
+.card--buy {
+	display: flex;
+	flex-direction: column;
+	padding: 4rem;
+}
+
+.card--buy img {
+	height: 70%;
+	width: 100%;
+	gap: 2rem;
+	border-radius: 4rem;
+}
+
+.card--buy p {
+	height: 20%;
+	font-size: 150%;
+	text-align: center;
+}
+
 .card--slider {
 	display: flex;
 	justify-content: center;
