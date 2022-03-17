@@ -91,11 +91,15 @@ slider.oninput = function () {
 const text = document.getElementById("js--text");
 const img = document.getElementById("js--img");
 
-let data = {
-    "text": "Dit is een super leuke fantastische test.",
-    "image": "/img/picture.webp"
-};
-
-text.innerText = data.text;
-img.src = data.image;
-
+let data = fetch("../data.json")
+    .then (
+    function(response) {
+        return response.json();
+        }
+    )
+    .then (
+        function(data) {
+            text.innerText = data.text;
+            img.src = data.image;
+        }
+    );

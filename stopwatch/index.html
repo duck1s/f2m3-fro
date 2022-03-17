@@ -11,15 +11,15 @@
 </head>
 
 <body id="js--body">
-    <article class="card card--slider">
+    <article class="card card--slider" aria-label="article">
         <h2 id="js--rangeValue">0</h2>
         <input id="js--slider" type="range" min="1" max="4" step="1">
     </article>
-    <article class="card card--buy">
-        <img id="js--img" src="" alt="">
+    <article class="card card--buy" aria-label="article">
+        <img id="js--img" src="data:," alt="Code image">
         <p id="js--text"></p>
     </article>
-    <article class="card card--stopwatch">
+    <article class="card card--stopwatch" aria-label="article">
         <div class="spanWrapper">
             <div>
                 <span class="timerText" id="js--hoursTimer">00</span>
@@ -30,7 +30,7 @@
             </div>
             <p class="timerText miliText" id="js--milisecondsTimer">000</p>
         </div>
-        <section class="buttonWrapper">
+        <section class="buttonWrapper" aria-label="section">
             <button class="button button--start" id="js--start">Start</button>
             <button class="button button--stop" id="js--stop">Stop</button>
             <button class="button button--reset" id="js--reset">Reset</button>
