@@ -26,4 +26,17 @@ let pokemon = fetch("https://pokeapi.co/api/v2/pokemon/" + randomNumber)
         }
     });
 
+const boysTitle = document.getElementById("js--boys-title");
+const boysText = document.getElementById("js--boys-text");
+let boys = fetch("https://api.tvmaze.com/search/shows?q=the%20boys")
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        const kaas = data[1]
+        console.log(kaas);
+        boysTitle.innerText = kaas.show.name;
+        boysText.innerText = kaas.show.summary;
+    });
+
 
