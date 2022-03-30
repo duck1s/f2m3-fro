@@ -39,4 +39,29 @@ let boys = fetch("https://api.tvmaze.com/search/shows?q=the%20boys")
         boysText.innerText = kaas.show.summary;
     });
 
+const nameTitle = document.getElementById("js--name-title");
+let nameInput = document.getElementById("js--name-input");
+const again = document.getElementById("js--again");
 
+nameInput.onkeyup = function (event) {
+    if (event.keyCode == 13) {
+        let age = fetch("https://api.agify.io?name=" + nameInput.value)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                const age = data.age
+                nameTitle.innerText = nameInput.value + " = " + age;
+                nameInput.style.display = "none";
+                again.style.display = "block";
+                
+            });
+    }
+};
+
+again.onclick = function () {
+    nameInput.style.display = "block";
+    again.style.display = "none";
+    nameInput.value = "";
+    nameTitle.innerText = "Search for name";
+};

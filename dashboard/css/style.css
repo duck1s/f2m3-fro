@@ -29,12 +29,25 @@ body {
     list-style: none;
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.2);
-    padding: 10rem;
+    padding: 5rem;
 }
 
 .card--first {
     grid-column: 1/5;
     grid-row: 1/7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.card--first > input {
+    width: 70%;
+    height: 4rem;
+    font-size: 2rem;
+    font-family: sans-serif;
+    padding: 0 0.5rem;
 }
 
 .card--second {
@@ -66,6 +79,18 @@ body {
     color: white;
     border-radius: 0.5rem;
     padding: 1rem;
+}
+
+#js--again {
+    width: 10rem;
+    height: 5rem;
+    font-size: 2rem;
+    border: none;
+    background: lightgray;
+    color: black;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: none;
 }
 
 @media screen and (max-width: 87.5rem) {
