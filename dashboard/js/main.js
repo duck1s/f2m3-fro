@@ -33,7 +33,7 @@ let boys = fetch("https://api.tvmaze.com/search/shows?q=the%20boys")
         return response.json();
     })
     .then(function (data) {
-        const kaas = data[1]
+        const kaas = data[0]
         console.log(kaas);
         boysTitle.innerText = kaas.show.name;
         boysText.innerText = kaas.show.summary;
