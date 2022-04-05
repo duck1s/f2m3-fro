@@ -1,0 +1,41 @@
+// Dit zijn de namen die onderin de tabel komen
+const labels = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+  ];
+
+// Dit is de data van de chart
+  const data = {
+    // Labels is de lijst met namen die bovenaanstaat die hier word genoemd en gebruikt
+    labels: labels,
+    // Settings van de chart
+    datasets: [{
+      // Dit is de naam van de chart
+      label: 'My First dataset',
+      // Dit is de background color van de knopjes van de chart
+      backgroundColor: 'rgb(255, 99, 132)',
+      // Dit is de border color van de knopjes van de chart en van de lijntjes
+      borderColor: 'rgb(255, 99, 132)',
+      // Dit zijn de waardes van de punten die op de chart genoemd worden
+      data: [0, 10, 5, 2, 20, 30, 45],
+    }]
+  };
+
+  const config = {
+    // Dit geeft aan wat voor chart het is
+    type: 'line',
+    // Dit geeft aan welke data er in komt
+    data: data,
+    // Hier kan je extra opties toevoegen
+    options: {}
+  };
+
+// Dit declareerd wat de chart is en haalt de canvas op uit HTML
+  const myChart = new Chart(
+    document.getElementById('js--chart-1'),
+    config
+  );
