@@ -24,20 +24,20 @@ body {
 }
 
 .section--first {
-    grid-column: 1 / 6;
+    grid-column: 1 / 7;
     grid-row: span 13;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     padding: 4rem;
     padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: 2rem;
 }
 
 .card {
     background-color: #eee;
     height: 50%;
-    width: 44%;
+    width: 48%;
     box-shadow: 0rem 1rem 2rem 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -49,7 +49,7 @@ body {
 }
 
 .section--second {
-    grid-column: 6 / 13;
+    grid-column: 7 / 13;
     grid-row: span 13;
     background-color: #eee;
     box-shadow: 0rem 1rem 2rem 0 rgba(0, 0, 0, 0.2);
