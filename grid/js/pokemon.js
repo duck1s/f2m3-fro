@@ -2,6 +2,10 @@ const pokemonImage = document.getElementById("js--pokemon-image");
 const catchButton = document.getElementById("js--catch-button");
 const pokemonText = document.getElementById("js--pokemon-text");
 let hasThrown = false;
+let i = 0;
+let fire = 0;
+
+
 
 const getPokemon = function() {
     let randomNumber = Math.floor(Math.random() * 151 + 1);
@@ -9,11 +13,17 @@ const getPokemon = function() {
     .then(function (response) {
         return response.json();
     })
-    .then(function (answer) {
-        let i = 0;
-        pokemon[i] = answer.types.name;
-        kaas = answer.types[0].type.name;
+    .then(function (pokemon) {
+        pokemon[i] = pokemon.types.name;
+        kaas = pokemon.types[0].type.name;
         console.log(kaas);
+
+        if (pokemon.types[0].type.name === "fire") {
+            fire++;
+        }
+
+        console.log(fire);
+
 
         const labels = [
             "answer.types",
@@ -32,19 +42,16 @@ const getPokemon = function() {
         }
 
         const config = {
-            type: 'doughnut',
-            data: data,
-        }
-        const config2 = {
             type: 'bar',
             data: data,
         }
 
-        new Chart(document.getElementById("js--chart-1"), config);
-        new Chart(document.getElementById("js--chart-2"), config2);
+        new Chart(document.getElementById("js--chart-2"), config);
+
     });
 }
 
 for (let i = 0; i < 10; i++) {
     getPokemon();
 }
+

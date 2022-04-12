@@ -65,6 +65,45 @@ canvas {
     object-fit: contain;
 }
 
+.button {
+	padding: 1rem 2rem;
+	border-radius: 0.5rem;
+	color: white;
+	width: 10rem;
+}
+
+.button--start {
+	background: rgb(75, 145, 81);
+}
+
+.button--stop {
+	background: #8a4343;
+}
+
+.button--reset {
+	background: #416d8b;
+}
+
+.timerText {
+	color: rgb(26, 26, 26);
+}
+
+.spanWrapper {
+	background: rgb(221, 221, 221);
+	border-radius: 1rem;
+	padding: 0.8rem 2rem;
+	border-style: outset;
+	border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+	width: 31rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.miliText {
+}
+
+
 @media screen and (max-width: 87.5rem) {
     .dashboard {
         grid-template-rows: repeat(12, 20rem);
